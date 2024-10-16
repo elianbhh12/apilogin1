@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Inicio de Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="flex h-screen bg-gray-100">
+
+    <div class="flex w-full md:w-3/5 mx-auto my-auto bg-white shadow-lg rounded-lg overflow-hidden">
+
+        <!-- Registro -->
+        <div class="w-full md:w-1/2 bg-blue-500 flex items-center justify-center p-10">
+            <div class="text-white w-full max-w-sm">
+                <h1 class="text-4xl font-bold mb-4 text-center">Registro</h1>
+                <form action="/register" method="POST" class="space-y-6">
+                    <div>
+                        <label for="nombre" class="block text-sm mb-2 font-bold">Nombre Completo</label>
+                        <div class="relative">
+                            <i class="fas fa-user absolute left-3 top-3 text-blue-300"></i>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"
+                                class="p-2 pl-10 text-black rounded w-full border border-blue-300 focus:ring focus:ring-blue-300"
+                                required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="usuario" class="block text-sm mb-2 font-bold">Usuario</label>
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-3 top-3 text-blue-300"></i>
+                            <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario"
+                                class="p-2 pl-10 text-black rounded w-full border border-blue-300 focus:ring focus:ring-blue-300"
+                                required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="contraseña" class="block text-sm mb-2 font-bold">Contraseña</label>
+                        <div class="relative">
+                            <i class="fas fa-lock absolute left-3 top-3 text-blue-300"></i>
+                            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña"
+                                class="p-2 pl-10 text-black rounded w-full border border-blue-300 focus:ring focus:ring-blue-300"
+                                required>
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="w-full font-bold bg-white text-blue-600 p-2 rounded hover:bg-black hover:text-white transition duration-200 shadow">Registrar</button>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Inicio de Sesión -->
+        <div class="w-full md:w-1/2 flex items-center justify-center p-10 bg-gray-50">
+            <div class="w-full max-w-sm">
+                <h1 class="text-4xl font-bold mb-4 text-center text-gray-700">Inicio de Sesión</h1>
+                <form action="/login" method="POST" class="space-y-6">
+                    <div>
+                        <label for="usuario" class="block text-sm mb-2 font-bold">Usuario</label>
+                        <div class="relative">
+                            <i class="fas fa-envelope absolute left-3 top-3 text-gray-300"></i>
+                            <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario"
+                                class="p-2 pl-10 text-black rounded w-full border border-gray-300 focus:ring focus:ring-gray-300"
+                                required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="contraseña" class="block text-sm mb-2 font-bold">Contraseña</label>
+                        <div class="relative">
+                            <i class="fas fa-lock absolute left-3 top-3 text-gray-300"></i>
+                            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña"
+                                class="p-2 pl-10 text-black rounded w-full border border-gray-300 focus:ring focus:ring-gray-300"
+                                required>
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 text-white font-bold p-2 rounded hover:bg-black hover:text-white transition duration-200 shadow">Iniciar
+                        Sesión</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
